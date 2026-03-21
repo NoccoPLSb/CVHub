@@ -39,6 +39,7 @@ public class Program
         builder.Services.AddScoped<AccountDeletionService>();
         builder.Services.AddScoped<DemoSnapshotSeeder>();
         builder.Services.AddScoped<DemoSnapshotExporter>();
+        builder.Services.AddSingleton<CodeStatsService>();
 
         var runExport = args.Any(a => string.Equals(a, "seed:export", StringComparison.OrdinalIgnoreCase));
 

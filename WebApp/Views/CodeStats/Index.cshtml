@@ -1,0 +1,51 @@
+@model WebApp.ViewModels.CodeStatsVm
+
+@{
+    ViewData["Title"] = "Kodstatistik";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pages/codestats.css" asp-append-version="true" />
+}
+
+<div class="codestats-page">
+    <div class="codestats-card">
+        <div class="codestats-hero">
+            <h1 class="codestats-title">Kodstatistik</h1>
+            <p class="codestats-sub">Antal källkodsfiler och kodrader i projektet, uppdelat per filtyp.</p>
+        </div>
+
+        <div class="codestats-divider" aria-hidden="true"></div>
+
+        <div class="codestats-body">
+            <table class="codestats-table" aria-label="Kodrader per filtyp">
+                <thead>
+                    <tr>
+                        <th scope="col">Filtyp</th>
+                        <th scope="col">Tillägg</th>
+                        <th scope="col" class="num">Filer</th>
+                        <th scope="col" class="num">Kodrader</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var row in Model.Rows)
+                    {
+                        <tr>
+                            <td>@row.Label</td>
+                            <td><code>@row.Extension</code></td>
+                            <td class="num">@row.FileCount.ToString("N0")</td>
+                            <td class="num">@row.LineCount.ToString("N0")</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="codestats-total">
+                        <td colspan="2"><strong>Totalt</strong></td>
+                        <td class="num"><strong>@Model.TotalFiles.ToString("N0")</strong></td>
+                        <td class="num"><strong>@Model.TotalLines.ToString("N0")</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>

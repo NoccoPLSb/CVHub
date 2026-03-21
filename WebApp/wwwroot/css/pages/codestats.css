@@ -1,0 +1,123 @@
+:root {
+    --cs-max: 700px;
+    --cs-radius: 18px;
+    --cs-border: 1px solid rgba(0, 0, 0, 0.16);
+    --cs-shadow: 0 24px 50px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.codestats-page {
+    max-width: var(--cs-max);
+    margin: 0 auto;
+    padding: 22px 18px 28px;
+}
+
+.codestats-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: var(--cs-border);
+    border-radius: var(--cs-radius);
+    box-shadow: var(--cs-shadow);
+    overflow: hidden;
+}
+
+.codestats-hero {
+    padding: 22px 22px 14px;
+    background:
+        radial-gradient(900px 520px at 20% 0%, rgba(127, 255, 212, 0.22) 0%, rgba(127, 255, 212, 0) 60%),
+        radial-gradient(700px 420px at 80% 35%, rgba(127, 255, 212, 0.12) 0%, rgba(127, 255, 212, 0) 62%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.codestats-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 950;
+    letter-spacing: -0.02em;
+    color: rgba(0, 0, 0, 0.90);
+}
+
+.codestats-sub {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 650;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.codestats-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.08);
+    margin: 0 22px;
+}
+
+.codestats-body {
+    padding: 20px 22px 24px;
+}
+
+.codestats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.codestats-table thead th {
+    text-align: left;
+    padding: 8px 12px;
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.codestats-table thead th.num,
+.codestats-table tbody td.num,
+.codestats-table tfoot td.num {
+    text-align: right;
+}
+
+.codestats-table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.codestats-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.codestats-table tbody td {
+    padding: 10px 12px;
+    color: rgba(0, 0, 0, 0.82);
+}
+
+.codestats-table tbody td code {
+    font-size: 12px;
+    background: rgba(127, 255, 212, 0.22);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    padding: 1px 6px;
+    font-family: monospace;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.codestats-total td {
+    padding: 12px 12px 4px;
+    border-top: 2px solid rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .codestats-page {
+        padding: 18px 14px 24px;
+    }
+
+    .codestats-hero,
+    .codestats-body {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .codestats-divider {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
