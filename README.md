@@ -8,7 +8,7 @@
 
 ## 💡 Description
 
-I built CVHub (a project for Örebro university, but I did 98% of it) to demonstrate how to architect a real-world, production-ready web application using modern .NET 8 patterns. It's a professional networking platform where users create detailed CV profiles, connect through messaging, collaborate on projects, and discover talent—all without the noise of traditional social networks.
+I built CVHub, a project for Örebro university to demonstrate how to architect a real-world, production-ready web application using modern .NET 8 patterns. It's a professional networking platform where users create detailed CV profiles, connect through messaging, collaborate on projects, and discover talent—all without the noise of traditional social networks.
 
 This isn't just a CRUD playground—it's a showcase of **Clean Architecture**, **Domain-Driven Design**, and **containerized deployment**, proving that you can build scalable, maintainable web apps without sacrificing code quality.
 
